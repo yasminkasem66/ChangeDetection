@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-changedetection',
+  templateUrl: './changedetection.component.html',
+  styleUrls: ['./changedetection.component.scss']
 })
-export class AppComponent {
+export class ChangedetectionComponent {
   title = 'onpush';
   importantItems:string[]=[];
   unImportantItems:string[]=[];
@@ -19,4 +19,5 @@ export class AppComponent {
     this.importantItems.push('Aquaman');
     this.unImportantItems.push('Batgirl');
   }
+
 }
