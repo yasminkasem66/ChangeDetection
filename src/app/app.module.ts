@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { ImportantChildComponent } from './important-child/important-child.component';
 import { UnimportantChildComponent } from './unimportant-child/unimportant-child.component';
 import { ChangedetectionComponent } from './changedetection/changedetection.component';
+import { PasswordPatternDirective } from './directives/password-pattern.directive';
+import { MatchPasswordDirective } from './directives/match-password.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     ImportantChildComponent,
     UnimportantChildComponent,
-    ChangedetectionComponent
+    ChangedetectionComponent,
+    PasswordPatternDirective,
+    MatchPasswordDirective,
 
   ],
   imports: [
