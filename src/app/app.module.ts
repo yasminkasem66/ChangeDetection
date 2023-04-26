@@ -8,6 +8,9 @@ import { UnimportantChildComponent } from './unimportant-child/unimportant-child
 import { ChangedetectionComponent } from './changedetection/changedetection.component';
 import { PasswordPatternDirective } from './directives/password-pattern.directive';
 import { MatchPasswordDirective } from './directives/match-password.directive';
+import { ValidateUserNameDirective } from './directives/validate-user-name.directive';
+import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,10 +20,13 @@ import { MatchPasswordDirective } from './directives/match-password.directive';
     ChangedetectionComponent,
     PasswordPatternDirective,
     MatchPasswordDirective,
+    ValidateUserNameDirective,
+    TemplateDrivenFormComponent,
 
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],
