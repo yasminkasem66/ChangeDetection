@@ -11,6 +11,10 @@ import { MatchPasswordDirective } from './directives/match-password.directive';
 import { ValidateUserNameDirective } from './directives/validate-user-name.directive';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 import { FormsModule } from '@angular/forms';
+import { NgTemplateNgForComponent } from './ngTemplate/ng-template-ng-for/ng-template-ng-for.component';
+import { NgTemplateNgIfComponent } from './ngTemplate/ng-template-ng-if/ng-template-ng-if.component';
+import { NgTemplateNgSwitchComponent } from './ngTemplate/ng-template-ng-switch/ng-template-ng-switch.component';
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +26,10 @@ import { FormsModule } from '@angular/forms';
     MatchPasswordDirective,
     ValidateUserNameDirective,
     TemplateDrivenFormComponent,
+    NgTemplateNgForComponent,
+    NgTemplateNgIfComponent,
+    NgTemplateNgSwitchComponent,
+    NavComponent,
 
   ],
   imports: [

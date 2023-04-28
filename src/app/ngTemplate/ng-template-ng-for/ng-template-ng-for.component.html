@@ -1,0 +1,26 @@
+
+<!-- here Angular uses <ng-template></ng-template>  it replace the ngif with it-->
+<h3 *ngIf="x">ng-template with ngFor</h3>
+<!--  Angular replaces the <ng-template> with diagnostic comments.  Nothing got rendered! :(-->
+<ng-template *ngIf="x">this will not work</ng-template>
+<!-- method 1 to solve  more details about this method in ngif component-->
+<ng-template [ngIf]="x">this will work</ng-template>
+<!-- method 2 to solve  bad solution-->
+<ng-template *ngIf="x then gox "> </ng-template>
+<ng-template #gox>this will work</ng-template>
+
+<ng-template ngFor let-person [ngForOf]= "allPersons" let-i="index">
+  <p>{{i + 1}}. {{person.name}} : {{person.age}} </p>
+</ng-template> 
+
+<!-- <ng-template ngFor let-item [ngForOf]="items" let-i="index" let-o="odd" let-e="even" let-f="first" let-l="last" [ngForTrackBy]="trackByFn" >
+    ---
+   </ng-template>
+
+
+<div   *ngFor="let person of allPersons; let i=index " >
+  <p>{{i + 1}}. {{person.name}} : {{person.age}} </p>
+</div> 
+
+
+-->
