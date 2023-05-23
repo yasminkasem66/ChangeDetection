@@ -15,6 +15,7 @@ import { NgTemplateNgForComponent } from './ngTemplate/ng-template-ng-for/ng-tem
 import { NgTemplateNgIfComponent } from './ngTemplate/ng-template-ng-if/ng-template-ng-if.component';
 import { NgTemplateNgSwitchComponent } from './ngTemplate/ng-template-ng-switch/ng-template-ng-switch.component';
 import { NavComponent } from './nav/nav.component';
+import { FileScreenShotComponent } from './file-screen-shot/file-screen-shot.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { NavComponent } from './nav/nav.component';
     NgTemplateNgIfComponent,
     NgTemplateNgSwitchComponent,
     NavComponent,
+    FileScreenShotComponent,
 
   ],
   imports: [

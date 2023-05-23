@@ -1,5 +1,23 @@
 
 <app-nav></app-nav>
+<form >
+    <label for="customer"></label>
+    <input type="text" name="customer" #customer >
+    <button type="submit" (click)="submit(customer.value)">
+        Save
+    </button>
+</form>
+<div class="" *ngFor="let customer of customers">
+ <div class="" [innerHTML]="customer"></div>
+ <div class="">{{customer}}</div>
+</div>
+
+<!-- <button class="btn btn-primary" [disabled]="isDisable">
+    property
+</button>
+<button class="btn btn-primary" disabled="{{isDisable}}">
+    interpolation
+</button> -->
 <div class="d-flex justify-content-center align-items-center mt-5">
     <router-outlet></router-outlet>
 </div>

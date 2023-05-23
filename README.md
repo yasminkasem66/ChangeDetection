@@ -20,6 +20,19 @@ ChangeDetectionStrategy.OnPush prevents Angular’s check to move up to the pare
 Now what if we want some of the arrays to be checked for change detection even if the component has OnPush
 1- this.unImportantItems = […this.unImportantItems,’Batgirl’];
 
+## Custom Validation for the template driven form 
+ custom validations for the template-driven form. 
+ Checking for user name availability
+ Password pattern validation
+ Matching the password entered in two different fields
+
+ 1-create  CustomvalidationService 
+
+
+
+ ##  take the first page of file uploaded as a screenshot 
+in 
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
@@ -39,6 +52,9 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 ## Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
+
+
 
 
 
