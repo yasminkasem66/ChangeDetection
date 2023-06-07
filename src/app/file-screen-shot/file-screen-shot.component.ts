@@ -13,39 +13,42 @@ export class FileScreenShotComponent {
 
     if (file && file.type === 'application/pdf') {
       const reader = new FileReader();
-
+  
       reader.onload = () => {
         const dataUrl = reader.result as string;
         const pdfElement = document.createElement('iframe');
-
+  
         pdfElement.src = dataUrl;
-        // pdfElement.hidden = true;
         document.body.appendChild(pdfElement);
-
+  
         pdfElement.onload = () => {
           const canvasElement = this.canvas.nativeElement;
           const context = canvasElement.getContext('2d');
           const pdfWindow = (pdfElement.contentWindow as any).window;
           const pdfDocument = pdfWindow.document;
-
+  
           const pdfPage = pdfDocument.querySelector('.page') ;
           const pdfPageWidth = pdfPage.offsetWidth;
           const pdfPageHeight = pdfPage.offsetHeight;
-
+  
+          // Clear previous content
+          context?.clearRect(0, 0, canvasElement.width, canvasElement.height);
+  
+          // Set canvas dimensions
           canvasElement.width = pdfPageWidth;
           canvasElement.height = pdfPageHeight;
-
-          context?.clearRect(0, 0, pdfPageWidth, pdfPageHeight);
+  
+          // Render new file
           context?.drawImage(pdfPage, 0, 0, pdfPageWidth, pdfPageHeight);
-
+  
           // Optional: Convert canvas image to base64 or save it as an image file
           const screenshotDataUrl = canvasElement.toDataURL('image/png');
           console.log(screenshotDataUrl);
-
+  
           document.body.removeChild(pdfElement);
         };
       };
-
+  
       reader.readAsDataURL(file);
     }
   }

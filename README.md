@@ -27,6 +27,8 @@ Now what if we want some of the arrays to be checked for change detection even i
  Matching the password entered in two different fields
 
  1-create  CustomvalidationService 
+ 2-Create the User model
+ 3-Create custom directives
 
 
 

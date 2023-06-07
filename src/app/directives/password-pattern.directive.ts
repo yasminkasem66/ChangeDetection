@@ -14,5 +14,6 @@ export class PasswordPatternDirective {
   validate(control: AbstractControl): { [key: string]: any } | null {
     return this.customValidator.patternValidator()(control);
   }
+  //We will implement the Validator interface on the class PasswordPatternDirective. We will override the validate method which accepts a parameter of type AbstractControl, that is the control we want to validate.
 
 }

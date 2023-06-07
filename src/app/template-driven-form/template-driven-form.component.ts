@@ -7,12 +7,25 @@ import { User } from 'src/@AppService/models/user';
   styleUrls: ['./template-driven-form.component.scss']
 })
 export class TemplateDrivenFormComponent {
-  userModal :User = {} as User;
+  userModal :User = {
+    person: {
+      firstName: '',
+      lastName: '',
+  },
+  //  name: '',
+  email: '',
+  username: '',
+  password: '',
+  confirmPassword: '',
+  } as User;
 
   constructor() { }
 
-  onSubmit() {
+  onSubmit(registerForm:any) {
+    console.log("registerForm",registerForm.form.value);
+    
     alert('Form Submitted successfully!!!\n Check the values in browser console.');
+    console.log(this.userModal);
     console.table(this.userModal);
   }
 }

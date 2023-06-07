@@ -1,7 +1,11 @@
 export interface User {
- name: string;
- email: string;
- username: string;
- password: string;
- confirmPassword: string;
+    person: {
+        firstName: string;
+        lastName: string;
+    }
+    //  name: string;
+    email: string;
+    username: string;
+    password: string;
+    confirmPassword: string;
 }
